@@ -8,7 +8,7 @@
       <v-list dense>
         <v-list-item  link to="/">
           <v-list-item-action>
-            <v-icon>mdi-view-dashboard</v-icon>
+            <v-icon>fa-tachometer-alt fa-fw</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>Dashboard</v-list-item-title>
@@ -16,7 +16,7 @@
         </v-list-item>
         <v-list-item link to="/about">
           <v-list-item-action>
-            <v-icon>mdi-cog</v-icon>
+            <v-icon>fa-info-circle fa-fw</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>About</v-list-item-title>

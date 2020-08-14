@@ -30,7 +30,10 @@
       clipped-left
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title class="site-logo">
+        <img src="./assets/img/time-turner-negative.svg" />
+        Mione
+      </v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -66,9 +69,18 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 p {
   font-size: 2em;
   text-align: center;
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  > img {
+    height: 42px;
+    width: auto;
+    margin-right: 10px;
+  }
 }
 </style>

@@ -6,7 +6,7 @@
       clipped
     >
       <v-list dense>
-        <v-list-item link>
+        <v-list-item  link to="/">
           <v-list-item-action>
             <v-icon>mdi-view-dashboard</v-icon>
           </v-list-item-action>
@@ -14,12 +14,12 @@
             <v-list-item-title>Dashboard</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link to="/about">
           <v-list-item-action>
             <v-icon>mdi-cog</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Settings</v-list-item-title>
+            <v-list-item-title>About</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -42,8 +42,8 @@
           align="center"
           justify="center"
         >
-          <v-col class="shrink">
-            <p>{{ message }}</p>
+          <v-col>
+            <router-view />
           </v-col>
         </v-row>
       </v-container>
@@ -59,7 +59,6 @@
   export default {
     data: () => ({
       drawer: null,
-      message: "Hello Vue!"
     }),
     created () {
       this.$vuetify.theme.dark = true

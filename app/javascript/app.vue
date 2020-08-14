@@ -42,6 +42,34 @@
         <img src="./assets/img/time-turner-negative.svg" />
         Mione
       </v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-avatar class="profile" title="asd">
+        <v-img :src="current_user.avatar" alt="Avatar" />
+      </v-avatar>
+      <span class="user-email">{{current_user.email}}</span>
+
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>mdi-dots-vertical</v-icon>
+          </v-btn>
+        </template>
+
+        <v-list>
+          <v-list-item link @click.prevent="logout">
+            <v-list-item-title>
+              <v-icon>fa-sign-out-alt fa-fw</v-icon>
+              Logout
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
 
     <v-main>
@@ -67,12 +95,16 @@
 </template>
 
 <script>
+  import { mapActions, mapGetters } from "vuex";
   export default {
     data: () => ({
       drawer: null,
     }),
     created () {
       this.$vuetify.theme.dark = true
+    },
+    computed: {
+      ...mapGetters("Session", ["current_user"])
     },
     methods: {
       logout: async function() {
@@ -90,6 +122,9 @@
 p {
   font-size: 2em;
   text-align: center;
+}
+.user-email {
+  padding-left: 10px;
 }
 .site-logo {
   display: flex;

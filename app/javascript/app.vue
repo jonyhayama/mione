@@ -118,6 +118,18 @@
   }
 </script>
 
+<style lang="scss">
+  @import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:wght@300;400;700&display=swap');
+
+  .v-application {
+    font-family: 'Raleway', sans-serif;
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Kurale', serif;
+    }
+  }
+</style>
+
 <style scoped lang="scss">
 p {
   font-size: 2em;

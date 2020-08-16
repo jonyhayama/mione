@@ -119,18 +119,21 @@
 </script>
 
 <style lang="scss">
+  @import "@/../assets/scss/_variables.scss";
   @import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:wght@300;400;700&display=swap');
 
   .v-application {
-    font-family: 'Raleway', sans-serif;
+    font-family: $font-body;
 
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'Kurale', serif;
+      font-family: $font-title;
     }
   }
 </style>
 
 <style scoped lang="scss">
+@import "@/../assets/scss/_variables.scss";
+
 p {
   font-size: 2em;
   text-align: center;
@@ -141,6 +144,10 @@ p {
 .site-logo {
   display: flex;
   align-items: center;
+  font-family: $font-title;
+  font-size: 1.5em;
+  font-weight: bold;
+
   > img {
     height: 42px;
     width: auto;

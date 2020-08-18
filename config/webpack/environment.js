@@ -14,5 +14,6 @@ const sassLoaderConfig = sassLoader.use.find(function(element) {
 // Use Dart-implementation of Sass (default is node-sass)
 const options = sassLoaderConfig.options
 options.implementation = require('sass')
+options.additionalData = `@import "@/../assets/scss/_variables.scss";`
 
 module.exports = environment

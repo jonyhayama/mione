@@ -119,7 +119,6 @@
 </script>
 
 <style lang="scss">
-  @import "@/../assets/scss/_variables.scss";
   @import url('https://fonts.googleapis.com/css2?family=Kurale&family=Raleway:wght@300;400;700&display=swap');
 
   .v-application {

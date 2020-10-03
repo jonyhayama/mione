@@ -128,6 +128,29 @@
       font-family: $font-title;
     }
   }
+
+  .theme--dark{
+    &.v-application{
+      background-color: var(--v-background-base);
+    }
+
+    &.v-navigation-drawer {
+      background-color: var(--v-background-lighten1);
+    }
+
+    &.v-app-bar.v-toolbar.v-sheet {
+      background-color: var(--v-secondary-base);
+    }
+
+    &.v-footer {
+      background-color: var(--v-secondary-base);
+    }
+
+    .v-list .v-list-item--active:before {
+      background: var(--v-primary-base);
+    }
+  }
+  
 </style>
 
 <style scoped lang="scss">

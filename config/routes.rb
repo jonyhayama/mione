@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   root to: "application#index"
 
-  match "*path", to: "application#index", format: false, via: :get
+  match "*path", to: "application#index", format: false, via: :get, constraints: -> (req) { !(req.fullpath =~ /^\/api\/.*/) }
 end

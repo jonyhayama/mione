@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: 'json' } do
     get '/users/self', to: 'users#self'
+
+    get '/timetracker/logs', to: 'timetracker#logs'
   end
 
   root to: "application#index"

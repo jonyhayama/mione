@@ -8,6 +8,7 @@ const router = new VueRouter({
   routes: [
     { path: '/', component: () => import('./views/dashboard.vue'), name: 'root_path' },
     { path: '/about', component: () => import('./views/about.vue'), name: 'about_path' },
+    { path: '/timetracker', component: () => import('./views/timetracker.vue'), name: 'timetracker_path' },
   ]
 });
 

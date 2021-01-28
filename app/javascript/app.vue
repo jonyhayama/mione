@@ -30,6 +30,14 @@
             <v-list-item-title>Time Tracker</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item link to="/timesheets">
+          <v-list-item-action>
+            <v-icon>fa-clock fa-fw</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Timesheets</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <v-list-item link @click.prevent="logout">
           <v-list-item-action>
             <v-icon>fa-sign-out-alt fa-fw</v-icon>
